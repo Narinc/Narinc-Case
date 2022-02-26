@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f5f6fa</color>
+    <color name="colorPrimaryDark">#fcfcfc</color>
+    <color name="colorAccent">#ced6e0</color>
+
+    <color name="statusBarColor">@color/appTextColor</color>
+    <color name="appTextColor">#000000</color>
+    <color name="green">#009432</color>
+    <color name="green_light">#7bed9f</color>
+    <color name="red">#EA2027</color>
+    <color name="red_light">#ff6b81</color>
+    <color name="white">#fff</color>
+    <color name="orange">#EE5A24</color>
+    <color name="orange_light">#ff7f50</color>
+    <color name="grey">#a4b0be</color>
+    <color name="purple">#6F1E51</color>
+    <color name="purple_light">#9b59b6</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#ffd32a</color>
+    <color name="blue">#007FFF</color>
+
+    <string-array name="rainbow">
+        <item>#FF007F</item>
+        <item>#FF0000</item>
+        <item>#FF7F00</item>
+        <item>#FFFF00</item>
+        <item>#7FFF00</item>
+        <item>#00FF00</item>
+        <item>#00FF7F</item>
+        <item>#00FFFF</item>
+        <item>#007FFF</item>
+        <item>#0000FF</item>
+        <item>#7F00FF</item>
+        <item>#FF00FF</item>
+    </string-array>
+
+</resources>

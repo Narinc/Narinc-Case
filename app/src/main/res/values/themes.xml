@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textAppearance">@style/TextAppearanceBase</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearance.Small</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearance.Medium</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearance.Large</item>
+
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/statusBarColor</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">@bool/status_bar_light</item>
+
+        <item name="toolbarStyle">@style/Widget.App.Toolbar</item>
+        <item name="toolbarWithBackButtonStyle">@style/Widget.App.Toolbar.WithBackButton</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="materialButtonStyle">@style/TextAppearance.Material.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/TextAppearance.Material.Button.Outlined</item>
+        <item name="materialTextButtonStyle">@style/TextAppearance.Material.Button.Text</item>
+        <!-- <item name="android:textAppearanceButton">@style/TextAppearance.Button</item> -->
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.AppCompat.ButtonBar</item>
+
+        <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
+
+        <item name="outlineTextFieldStyle">@style/Widget.App.TextInputLayout.Outlined</item>
+
+    </style>
+
+    <style name="AlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="buttonBarPositiveButtonStyle">@style/Alert.Button.Positive</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TextAppearance.Material.Button.Text</item>
+        <item name="buttonBarNeutralButtonStyle">@style/TextAppearance.Material.Button.Text</item>
+        <item name="colorOnSurface">@color/appTextColor</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/appTextColor</item>
+        <item name="android:textColorPrimary">@color/appTextColor</item>
+    </style>
+
+    <style name="Alert.Button.Positive" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/appTextColor</item>
+        <item name="elevation">0dp</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+</resources>
