@@ -29,8 +29,7 @@
 
         <item name="materialCardViewStyle">@style/Widget.App.CardView</item>
 
-        <item name="outlineTextFieldStyle">@style/Widget.App.TextInputLayout.Outlined</item>
-
+        <item name="textInputStyle">@style/Widget.App.TextInputLayout</item>
     </style>
 
     <style name="AlertDialogTheme" parent="Theme.MaterialComponents.Light.Dialog.Alert">
