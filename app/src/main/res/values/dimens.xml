@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="status_bar_light">false</bool>
-
     <!-- typical spacing between two views -->
     <dimen name="spacing_4xlarge">72dp</dimen>
     <dimen name="spacing_3xlarge">64dp</dimen>

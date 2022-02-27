@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">RootProject</string>
+    <string name="app_name">Challenge</string>
     <string name="sign_in_title">Sign in</string>
     <string name="sign_in_primary_button">Continue</string>
     <string name="sign_in_username_hint">Username</string>
     <string name="sign_in_password_hint">Password</string>
+    <string name="sign_in_username_error">Username must be longer than two characters</string>
+    <string name="sign_in_password_error">Password should consist minimum 6 characters with at least 1 uppercase character, 1 number</string>
 </resources>
