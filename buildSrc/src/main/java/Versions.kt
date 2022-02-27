@@ -1,8 +1,8 @@
 object Versions {
 
     const val kotlinVersion = "1.6.10"
-    const val ktLintVersion = "10.2.1"
-    const val ktLintSnapshotVersion = "0.43.2"
+    const val ktLintVersion = "10.2.0"
+    const val ktLintSnapshotVersion = "0.42.1"
     const val detektVersion = "1.19.0"
     const val benManesVersion = "0.41.0"
 
