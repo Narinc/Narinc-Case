@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/size_meditation_image_width"
+    android:layout_height="@dimen/size_meditation_height"
+    android:background="?colorPrimaryDark"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:backgroundTint="@drawable/radius_item"
+        android:layout_height="@dimen/size_meditation_image_height"
+        android:contentDescription="@string/content_description"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/exo_semi_bold"
+        android:lines="1"
+        android:padding="@dimen/spacing_small"
+        android:textAppearance="@style/TextAppearance.Medium"
+        android:textColor="@color/white"
+        tools:text="Sleep Well" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:paddingHorizontal="@dimen/spacing_small"
+        android:paddingBottom="@dimen/spacing_small"
+        android:textColor="@color/white"
+        tools:text="A dreamy sleep" />
+</LinearLayout>
