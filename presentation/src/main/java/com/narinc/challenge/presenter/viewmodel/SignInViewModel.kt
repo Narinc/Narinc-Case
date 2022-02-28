@@ -2,6 +2,7 @@ package com.narinc.challenge.presenter.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.narinc.challenge.domain.interactor.SaveUserUseCase
 import com.narinc.challenge.domain.interactor.SignInValidationUseCase
 import com.narinc.challenge.presenter.utils.CoroutineContextProvider
 import com.narinc.challenge.presenter.utils.Event
@@ -12,7 +13,8 @@ import javax.inject.Inject
 @HiltViewModel
 class SignInViewModel @Inject constructor(
     contextProvider: CoroutineContextProvider,
-    private val validation: SignInValidationUseCase
+    private val validation: SignInValidationUseCase,
+    private val saveUser: SaveUserUseCase
 ) : BaseViewModel(contextProvider) {
 
     private val _userNameError = MutableLiveData<Event<Boolean>>()
@@ -26,7 +28,7 @@ class SignInViewModel @Inject constructor(
         // _characterList.postValue(CharacterUIModel.Error(exception.message ?: "Error"))
     }
 
-    fun attemptSignIn(username: String?, password: String?) {
+    fun attemptSignIn(username: String, password: String) {
         launchCoroutineMain {
             validation(Pair(username, password)).collect {
                 when (it) {
@@ -38,6 +40,7 @@ class SignInViewModel @Inject constructor(
                     }
                     SignInValidationUseCase.RESULT.VALID -> {
                         setError()
+                        onValidAttempt(username)
                     }
                 }
             }
@@ -50,5 +53,11 @@ class SignInViewModel @Inject constructor(
     ) {
         _userNameError.value = Event(usernameError)
         _passwordError.value = Event(passwordError)
+    }
+
+    private fun onValidAttempt(username: String) {
+        launchCoroutineIO {
+            saveUser(username)
+        }
     }
 }
