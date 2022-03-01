@@ -18,9 +18,10 @@ class UserRepositoryImpl @Inject constructor(
         dataSourceFactory.getDataStore().saveUser(userEntity)
     }
 
-    override suspend fun getUser(): Flow<User> = flow {
+    override suspend fun getUser(): Flow<User?> = flow {
         val userEntity = dataSourceFactory.getDataStore().getUser()
-        val user = userMapper.mapFromEntity(userEntity)
-        emit(user)
+        userEntity?.let {
+            emit(userMapper.mapFromEntity(it))
+        } ?: emit(null)
     }
 }

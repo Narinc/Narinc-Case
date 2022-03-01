@@ -4,5 +4,5 @@ import com.narinc.challenge.data.models.UserEntity
 
 interface UserDataSource {
     suspend fun saveUser(user: UserEntity)
-    suspend fun getUser(): UserEntity
+    suspend fun getUser(): UserEntity?
 }

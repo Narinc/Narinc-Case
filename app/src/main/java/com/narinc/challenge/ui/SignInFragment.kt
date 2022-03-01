@@ -3,6 +3,7 @@ package com.narinc.challenge.ui
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.narinc.challenge.R
 import com.narinc.challenge.databinding.FragmentSignInBinding
 import com.narinc.challenge.extension.observe
@@ -31,6 +32,7 @@ class SignInFragment : BaseFragment<FragmentSignInBinding, BaseViewModel>() {
 
         observe(viewModel.userNameError, ::showUsernameError)
         observe(viewModel.passwordError, ::showPasswordError)
+        observe(viewModel.navigateHome, ::navigateHome)
     }
 
     private fun showUsernameError(event: Event<Boolean>) {
@@ -44,6 +46,14 @@ class SignInFragment : BaseFragment<FragmentSignInBinding, BaseViewModel>() {
         event.getContentIfNotHandled()?.let {
             binding.tilSignInPassword.error =
                 if (it) getString(R.string.sign_in_password_error) else null
+        }
+    }
+
+    private fun navigateHome(event: Event<String>) {
+        event.getContentIfNotHandled()?.let {
+            findNavController().navigate(
+                SignInFragmentDirections.actionSignInFragmentToHomeFragment()
+            )
         }
     }
 }
