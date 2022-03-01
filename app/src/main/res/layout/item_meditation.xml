@@ -3,33 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/size_meditation_image_width"
     android:layout_height="@dimen/size_meditation_height"
-    android:background="?colorPrimaryDark"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:background="?colorPrimaryDark">
 
     <ImageView
+        android:id="@+id/iv_meditation"
         android:layout_width="match_parent"
-        android:scaleType="centerCrop"
-        android:backgroundTint="@drawable/radius_item"
         android:layout_height="@dimen/size_meditation_image_height"
+        android:background="@drawable/radius_item"
         android:contentDescription="@string/content_description"
-        tools:src="@tools:sample/avatars" />
+        android:scaleType="centerCrop"
+        tools:src="@drawable/ic_baseline_error_outline_64" />
 
     <TextView
+        android:id="@+id/tv_meditation_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/exo_semi_bold"
         android:lines="1"
         android:padding="@dimen/spacing_small"
-        android:textAppearance="@style/TextAppearance.Medium"
         android:textColor="@color/white"
         tools:text="Sleep Well" />
 
     <TextView
+        android:id="@+id/tv_meditation_subtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="1"
         android:paddingHorizontal="@dimen/spacing_small"
         android:paddingBottom="@dimen/spacing_small"
         android:textColor="@color/white"
+        android:textSize="@dimen/font_tiny"
         tools:text="A dreamy sleep" />
 </LinearLayout>

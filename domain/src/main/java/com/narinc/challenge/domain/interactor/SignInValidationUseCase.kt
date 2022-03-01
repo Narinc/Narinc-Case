@@ -5,9 +5,9 @@ import kotlinx.coroutines.flow.flow
 import java.util.regex.Pattern
 import javax.inject.Inject
 
-typealias SignInUsernameValidationBaseUseCase = BaseUseCase<Pair<String?, String?>, Flow<SignInValidationUseCase.RESULT>>
+typealias SignInValidationBaseUseCase = BaseUseCase<Pair<String?, String?>, Flow<SignInValidationUseCase.RESULT>>
 
-class SignInValidationUseCase @Inject constructor() : SignInUsernameValidationBaseUseCase {
+class SignInValidationUseCase @Inject constructor() : SignInValidationBaseUseCase {
 
     enum class RESULT {
         INVALID_USERNAME,
