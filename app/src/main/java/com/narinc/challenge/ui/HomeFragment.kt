@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.narinc.challenge.adapters.HomePageAdapter
 import com.narinc.challenge.databinding.FragmentHomeBinding
+import com.narinc.challenge.extension.observe
 import com.narinc.challenge.presenter.viewmodel.BaseViewModel
 import com.narinc.challenge.presenter.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,5 +26,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, BaseViewModel>() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvHomepage.adapter = adapter
+
+        observe(viewModel.showData) {
+            adapter.list = it
+        }
     }
 }

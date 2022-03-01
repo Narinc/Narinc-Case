@@ -38,7 +38,7 @@ class VerticalItemAdapter @Inject constructor(
             binding.apply {
                 tvStoryTitle.text = item.title
                 tvStorySubtitle.text = item.subtitle
-                glide.load(item.image.small).into(ivStory)
+                glide.load(item.image?.small).into(ivStory)
                 root.setOnClickListener {
                     onItemClickListener?.let { itemClick ->
                         itemClick(item)

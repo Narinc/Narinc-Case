@@ -38,7 +38,7 @@ class HorizontalItemAdapter @Inject constructor(
             binding.apply {
                 tvMeditationTitle.text = item.title
                 tvMeditationSubtitle.text = item.subtitle
-                glide.load(item.image.small).into(ivMeditation)
+                glide.load(item.image?.small).into(ivMeditation)
                 root.setOnClickListener {
                     onItemClickListener?.let { itemClick ->
                         itemClick(item)
