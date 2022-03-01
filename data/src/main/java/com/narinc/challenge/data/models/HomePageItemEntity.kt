@@ -1,9 +1,9 @@
-package com.narinc.challenge.domain.models
+package com.narinc.challenge.data.models
 
-data class HomePageItem(
+data class HomePageItemEntity(
     val title: String?,
     val subtitle: String?,
-    val image: ItemImage?,
+    val image: ImageEntity?,
     val date: String?,
     val content: String?
 )

@@ -3,13 +3,13 @@ const val appId = "com.narinc.rootproject"
 object ProductionEnvironments {
     const val versionCode = 1
     const val versionName = "1.0"
-    const val baseUrl = ""
+    const val baseUrl = "https://media.meditopia.com/"
 }
 
 object DevelopmentEnvironments {
     const val versionCode = 1
     const val versionName = "1.0"
-    const val baseUrl = ""
+    const val baseUrl = "https://media.meditopia.com/"
 }
 
 object PresenterEnvironments {
