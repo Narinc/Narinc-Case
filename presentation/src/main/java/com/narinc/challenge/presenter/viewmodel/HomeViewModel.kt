@@ -14,6 +14,4 @@ class HomeViewModel @Inject constructor(
         // val message = ExceptionHandler.parse(exception)
         // _characterList.postValue(CharacterUIModel.Error(exception.message ?: "Error"))
     }
-
-
 }
