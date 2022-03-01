@@ -7,7 +7,7 @@ import javax.inject.Inject
 open class CachePreferencesHelper @Inject constructor(context: Context) {
 
     companion object {
-        private const val PREF_PACKAGE_NAME = "com.narinc.rootproject.preferences"
+        private const val PREF_PACKAGE_NAME = "com.narinc.challenge.preferences"
         private const val PREF_KEY_LAST_CACHE = "last_cache"
     }
 

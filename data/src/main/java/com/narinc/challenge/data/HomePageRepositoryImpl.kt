@@ -14,9 +14,19 @@ class HomePageRepositoryImpl @Inject constructor(
 ) : HomePageRepository {
 
     override suspend fun getHomePageData(): Flow<List<HomePageData>> = flow {
-        val list = dataSourceFactory.getDataStore().getHomePageEntities().map {
+        val isCached = dataSourceFactory.getCacheDataSource().isCached()
+        val list = dataSourceFactory.getDataStore(isCached).getHomePageEntities().map {
             mapper.mapFromEntity(it)
         }
+        saveHomePage(list)
         emit(list)
+    }
+
+    private suspend fun saveHomePage(list: List<HomePageData>) {
+        dataSourceFactory.getCacheDataSource().saveHomePageEntities(
+            list.map {
+                mapper.mapToEntity(it)
+            }
+        )
     }
 }

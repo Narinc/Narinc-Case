@@ -1,6 +1,7 @@
 package com.narinc.challenge.di
 
 import com.narinc.challenge.BuildConfig
+import com.narinc.challenge.data.repository.HomePageRemote
 import com.narinc.challenge.remote.api.AppService
 import com.narinc.challenge.remote.api.ServiceFactory
 import com.narinc.challenge.remote.repository.HomePageRemoteImpl
@@ -21,5 +22,7 @@ object RemoteModule {
 
     @Provides
     @Singleton
-    fun provideHomePageRemote(remote: HomePageRemoteImpl) = remote
+    fun provideHomePageRemote(remote: HomePageRemoteImpl): HomePageRemote {
+        return remote
+    }
 }
