@@ -13,5 +13,5 @@ interface UserDao {
     suspend fun addUser(user: UserCacheEntity)
 
     @Query("SELECT * FROM users LIMIT 1")
-    fun getActiveUser(): UserCacheEntity
+    fun getActiveUser(): UserCacheEntity?
 }

@@ -13,5 +13,5 @@ class UserCacheDataSource @Inject constructor(
         userCache.saveUser(user)
     }
 
-    override suspend fun getUser(): UserEntity = userCache.getUser()
+    override suspend fun getUser() = userCache.getUser()
 }

@@ -12,10 +12,12 @@ class UserCacheImpl @Inject constructor(
 ) : UserCache {
 
     override suspend fun saveUser(userEntity: UserEntity) {
-        userDao.addUser(userCacheMapper.mapToCached(userEntity))
+        userCacheMapper.mapToCached(userEntity)?.let {
+            userDao.addUser(it)
+        }
     }
 
-    override suspend fun getUser(): UserEntity {
+    override suspend fun getUser(): UserEntity? {
         return userCacheMapper.mapFromCached(userDao.getActiveUser())
     }
 }

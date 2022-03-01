@@ -23,6 +23,9 @@ class SignInViewModel @Inject constructor(
     private val _passwordError = MutableLiveData<Event<Boolean>>()
     val passwordError: LiveData<Event<Boolean>> = _passwordError
 
+    private val _navigateHome = MutableLiveData<Event<String>>()
+    val navigateHome: LiveData<Event<String>> = _navigateHome
+
     override val coroutineExceptionHandler = CoroutineExceptionHandler { _, exception ->
         // val message = ExceptionHandler.parse(exception)
         // _characterList.postValue(CharacterUIModel.Error(exception.message ?: "Error"))
@@ -41,6 +44,7 @@ class SignInViewModel @Inject constructor(
                     SignInValidationUseCase.RESULT.VALID -> {
                         setError()
                         onValidAttempt(username)
+                        _navigateHome.value = Event(username)
                     }
                 }
             }
