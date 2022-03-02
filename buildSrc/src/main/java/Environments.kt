@@ -1,4 +1,4 @@
-const val appId = "com.narinc.rootproject"
+const val appId = "com.narinc.challenge"
 
 object ProductionEnvironments {
     const val versionCode = 1
