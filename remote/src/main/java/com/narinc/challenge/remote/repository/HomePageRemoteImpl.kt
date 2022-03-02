@@ -19,12 +19,14 @@ class HomePageRemoteImpl @Inject constructor(
             HomePageEntity.Type.MEDITATION,
             response.meditations?.map {
                 meditationMapper.mapFromModel(it)
-            })
+            }
+        )
         val homePageStoryEntity = HomePageEntity(
             HomePageEntity.Type.STORY,
             response.stories?.map {
                 storyMapper.mapFromModel(it)
-            })
+            }
+        )
         val homePageCardEntity = HomePageEntity(
             HomePageEntity.Type.CARD
         )

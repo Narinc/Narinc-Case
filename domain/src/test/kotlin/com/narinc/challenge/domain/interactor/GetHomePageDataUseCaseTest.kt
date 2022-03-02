@@ -33,7 +33,9 @@ class GetHomePageDataUseCaseTest : DomainBaseTest() {
         dispatcher.runBlockingTest {
             // Arrange (Given)
             whenever(repository.getHomePageData()) doReturn HomePageFakeData.provideHomePageDataList(
-                meditationsSize = 10, isBannerEnable = true, storiesSize = 20
+                meditationsSize = 10,
+                isBannerEnable = true,
+                storiesSize = 20
             )
 
             // Act (When)

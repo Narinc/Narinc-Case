@@ -2,10 +2,10 @@ package com.narinc.challenge.remote.fakes
 
 import com.narinc.challenge.data.models.HomePageItemEntity
 import com.narinc.challenge.data.models.ImageEntity
+import com.narinc.challenge.remote.fakes.FakeValueFactory.randomString
 import com.narinc.challenge.remote.models.Image
 import com.narinc.challenge.remote.models.Meditation
 import com.narinc.challenge.remote.models.Story
-import com.narinc.challenge.remote.fakes.FakeValueFactory.randomString
 import com.narinc.challenge.remote.models.response.HomePageResponse
 
 object FakeRemoteData {
@@ -55,7 +55,8 @@ object FakeRemoteData {
     }
 
     private fun provideImage() = Image(
-        small = randomString(), large = randomString()
+        small = randomString(),
+        large = randomString()
     )
 
     fun provideHomePageItemEntityList(size: Int): List<HomePageItemEntity> {
@@ -75,6 +76,7 @@ object FakeRemoteData {
     )
 
     private fun provideImageEntity() = ImageEntity(
-        small = randomString(), large = randomString()
+        small = randomString(),
+        large = randomString()
     )
 }
