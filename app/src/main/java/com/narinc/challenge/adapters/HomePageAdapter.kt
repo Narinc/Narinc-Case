@@ -2,6 +2,7 @@ package com.narinc.challenge.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.LinearSnapHelper
@@ -11,6 +12,9 @@ import com.narinc.challenge.databinding.ItemCardMessageBinding
 import com.narinc.challenge.databinding.ItemHorizontalRecyclerviewBinding
 import com.narinc.challenge.databinding.ItemVerticalRecyclerviewBinding
 import com.narinc.challenge.domain.models.HomePageData
+import com.narinc.challenge.domain.models.HomePageItem
+import com.narinc.challenge.models.MediaDetail
+import com.narinc.challenge.ui.HomeFragmentDirections
 import com.narinc.challenge.util.SpaceItemDecoration
 import javax.inject.Inject
 
@@ -77,7 +81,9 @@ class HomePageAdapter @Inject constructor(
                 horizontalItemAdapter.list = it
             }
             horizontalItemAdapter.setItemClickListener {
-                // navigate
+                binding.root.findNavController().navigate(
+                    navigate(it, HomePageData.Type.MEDITATION)
+                )
             }
             binding.apply {
                 val snapHelper = LinearSnapHelper()
@@ -102,7 +108,9 @@ class HomePageAdapter @Inject constructor(
                 verticalItemAdapter.list = it
             }
             verticalItemAdapter.setItemClickListener {
-                // navigate
+                binding.root.findNavController().navigate(
+                    navigate(it, HomePageData.Type.STORY)
+                )
             }
             binding.apply {
                 rvStories.adapter = verticalItemAdapter
@@ -110,4 +118,16 @@ class HomePageAdapter @Inject constructor(
             }
         }
     }
+
+    private fun navigate(it: HomePageItem, type: HomePageData.Type) =
+        HomeFragmentDirections.actionHomeFragmentToDetailFragment(
+            MediaDetail(
+                title = it.title,
+                subtitle = it.subtitle,
+                image = it.image?.large,
+                date = it.date,
+                content = it.content
+            ),
+            type.value
+        )
 }

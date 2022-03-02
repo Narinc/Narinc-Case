@@ -7,6 +7,7 @@ object Config {
     }
 
     object Plugins {
+        const val parcelize = "kotlin-parcelize"
         const val kotlin = "kotlin"
         const val javaLibrary = "java-library"
         const val androidApplication = "com.android.application"

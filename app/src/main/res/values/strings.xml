@@ -10,4 +10,6 @@
     <string name="content_description">TODO</string>
     <string name="home_card_message">Look. Pretty, isn\'t it? Perfectly balanced. As all things should be.</string>
     <string name="home_stories_title">Stories</string>
+    <string name="meditation_detail">Meditation Detail</string>
+    <string name="story_detail">Story Detail</string>
 </resources>

@@ -37,7 +37,10 @@
     </style>
 
     <style name="Widget.App.Toolbar.WithBackButton" parent="Widget.App.Toolbar">
-        <item name="navigationIcon">@drawable/ic_navigate_before_black_24dp</item>
+        <item name="navigationIcon">@drawable/ic_baseline_arrow_back_24</item>
+        <item name="android:background">?colorPrimaryDark</item>
+        <item name="titleTextColor">@color/white</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
     </style>
 
     <style name="Widget.App.CardView" parent="Widget.MaterialComponents.CardView">
