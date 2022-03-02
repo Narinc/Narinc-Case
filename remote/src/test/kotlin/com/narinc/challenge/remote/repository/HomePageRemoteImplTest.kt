@@ -55,7 +55,7 @@ class HomePageRemoteImplTest : RemoteBaseTest() {
             `when`(service.getData()) doReturn response
 
             // Act (When)
-            val entities = remote.getHomePageEntities()
+            remote.getHomePageEntities()
 
             // Assert (Then)
             verify(meditationMapper, Mockito.times(10)).mapFromModel(any())

@@ -5,7 +5,7 @@ import kotlinx.coroutines.test.TestCoroutineExceptionHandler
 import org.junit.Rule
 
 @ExperimentalCoroutinesApi
-abstract class RemoteBaseTest {
+open class RemoteBaseTest {
 
     /**
      * A test rule to allow testing coroutines that use the main dispatcher
