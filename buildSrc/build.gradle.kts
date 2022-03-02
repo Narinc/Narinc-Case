@@ -12,7 +12,7 @@ object Plugins {
     const val AGP = "7.0.4"
     const val KOTLIN = "1.6.10"
     const val HILT = "2.40.5"
-    const val NAVIGATION = "2.3.5"
+    const val NAVIGATION = "2.4.1"
 }
 
 dependencies {

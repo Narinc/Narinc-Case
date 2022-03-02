@@ -16,8 +16,8 @@ object Versions {
     // Activity KTX for viewModels() dependencies
     const val activityKtxVersion = "1.4.0"
 
-    const val navFragmentKtxVersion = "2.4.0-rc01"
-    const val navUiKtxVersion = "2.4.0-rc01"
+    const val navFragmentKtxVersion = "2.4.1"
+    const val navUiKtxVersion = "2.4.1"
 
     // LifeCycle dependencies
     const val viewmodelKtxVersion = "2.4.0"
