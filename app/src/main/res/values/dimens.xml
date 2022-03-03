@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <bool name="status_bar_light">false</bool>
+    <!-- font sizes -->
+    <dimen name="font_larger">22sp</dimen>
+    <dimen name="font_large">18sp</dimen>
+    <dimen name="font_normal">15sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_tiny">11sp</dimen>
+
+    <!-- typical spacing between two views -->
+    <dimen name="spacing_4xlarge">72dp</dimen>
+    <dimen name="spacing_3xlarge">64dp</dimen>
+    <dimen name="spacing_2xlarge">48dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_tiny">4dp</dimen>
+
+    <dimen name="size_meditation_image_width">180dp</dimen>
+    <dimen name="size_meditation_image_height">240dp</dimen>
+    <dimen name="size_meditation_height">300dp</dimen>
+
+    <dimen name="size_story_image_width">180dp</dimen>
+    <dimen name="size_story_image_height">180dp</dimen>
+    <dimen name="size_story_height">240dp</dimen>
+
+    <dimen name="play_icon_background_size">100dp</dimen>
+
 </resources>

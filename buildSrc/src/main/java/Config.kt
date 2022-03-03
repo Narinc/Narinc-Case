@@ -1,12 +1,13 @@
 object Config {
 
     object Sdk {
-        const val minSdkVersion = 21
+        const val minSdkVersion = 23
         const val targetSdkVersion = 31
         const val compileSdkVersion = 31
     }
 
     object Plugins {
+        const val parcelize = "kotlin-parcelize"
         const val kotlin = "kotlin"
         const val javaLibrary = "java-library"
         const val androidApplication = "com.android.application"

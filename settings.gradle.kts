@@ -16,7 +16,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = "RootProject"
+rootProject.name = "Challenge"
 
 include(
     "app",

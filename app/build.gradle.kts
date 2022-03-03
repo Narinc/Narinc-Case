@@ -6,6 +6,7 @@ plugins {
     id(Config.Plugins.kotlinKapt)
     id(Config.Plugins.dagger)
     id(Config.Plugins.navigationSafArgs)
+    id(Config.Plugins.parcelize)
 }
 
 android {

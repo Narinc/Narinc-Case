@@ -36,7 +36,6 @@ object Dependencies {
             "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifeCycleRuntimeKtxVersion}"
     }
 
-
     object DaggerHiltDep {
         const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.hiltAndroidVersion}"
         const val hiltAndroidKapt = "com.google.dagger:hilt-compiler:${Versions.hiltAndroidVersion}"
@@ -104,5 +103,4 @@ object Dependencies {
         const val robolectric = "org.robolectric:robolectric:${Versions.robolectricVersion}"
         const val roomTest = "androidx.room:room-testing:${Versions.roomVersion}"
     }
-
 }
